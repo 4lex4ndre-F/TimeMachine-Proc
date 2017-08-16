@@ -1,11 +1,12 @@
 <?php
 
 
-// PENSER A IMPLEMENTER LA DECONNEXION
-/*if(isset($_GET['action']) && $_GET['action'] =='deconnexion' )
+// DECONNEXION
+if(isset($_GET['action']) && $_GET['action'] =='deconnexion' )
 {
 	session_destroy();
-}*/	
+    header("location:test_homepage.php");
+}
 
 
 //vérification si l'utilisateur est connecté : 
@@ -25,16 +26,28 @@ $password = "";
 
 
 
-if(!empty($_POST['pseudo']) && !empty($_POST['password']))
+if(!empty($_POST['login']) && !empty($_POST['password']))
 {
-    $message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST REMPLI<br /></div>';
+    //$message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST REMPLI<br /></div>';
 
 
-    $pseudo = $_POST['pseudo'];
+    $login = $_POST['login'];
     $password = $_POST['password'];
     // comparaison du post avec la BDD - /!\ réduire les champs de la table users
-    $verif_connexion = $pdo->prepare("SELECT * FROM users WHERE pseudo = :pseudo AND password = :password");
-    $verif_connexion->bindParam(":pseudo", $pseudo, PDO::PARAM_STR);
+    $req = "SELECT * FROM users WHERE password = :password AND ";
+    if(!empty($_POST['login']) && filter_var($_POST['login'], FILTER_VALIDATE_EMAIL))
+    {
+        $req .= "email = :email";
+        $param = ":email";
+    }
+    else
+    {
+        $req .= "pseudo = :pseudo";
+        $param = ":pseudo";
+    }
+
+    $verif_connexion = $pdo->prepare($req);
+    $verif_connexion->bindParam($param, $login, PDO::PARAM_STR);
     $verif_connexion->bindParam(":password", $password, PDO::PARAM_STR);
     $verif_connexion->execute();
 
@@ -64,7 +77,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password']))
 }
 else
 {
-    $message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST VIDE<br /></div>';
+    //$message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST VIDE<br /></div>';
 }
 
 

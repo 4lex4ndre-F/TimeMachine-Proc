@@ -4,77 +4,106 @@ body {
 
 
 /* DEBUG */
+
 pre {
     background: orange;
     color: black;
     font-weight: bold;
-
 }
 
 
+/* HEADER */
+
+.top-right {
+    float: right;
+}
+
+.top-right>a {
+    width: 100%;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    background: #666;
+}
+
+.top-left {
+    float: left;
+}
+
+.clearfixe {
+    clear: both;
+}
 
 
 /* FORMULAIRE TEST - css tout pourri */
+
 .test_form {
     box-sizing: border-box;
     margin: 0;
-    padding : 5px;
+    padding: 5px;
     text-align: center;
     background: lightgray;
 }
-.test_form > .form-2 {    
+
+.test_form>.form-2 {
     box-sizing: border-box;
     display: inline-block;
     width: 40%;
     margin: 0 0 10px 0;
 }
-.test_form > .form-2 > label, input{
+
+.test_form>.form-2>label+input {
     box-sizing: border-box;
-    display : block;
+    display: block;
     width: 90%;
     padding: 5px;
 }
-.test_form > label, input{
+
+.test_form>label+input {
     box-sizing: border-box;
-    display : block;
+    display: block;
     width: 90%;
     padding: 5px;
 }
-.test_form > input.bouton, button {
-    margin : 0 auto;
-    width : 40%;
+
+.test_form>input.bouton+button {
+    margin: 0 auto;
+    width: 40%;
 }
 
 
 /* cadre / vignette de recherche */
+
 div.vignette {
     margin: 20px auto;
 }
+
 div.cadre {
-    text-align:center;
+    text-align: center;
     background: darkgray;
     height: 250px;
 }
 
 
-
 /* FOOTER */
+
 footer {
     background: #444;
 }
 
 
-
-
 /* NAV du FOOTER */
+
 ul.horizontal {
     text-align: center;
 }
+
 ul.horizontal li {
     list-style-type: none;
     display: inline-block;
     margin: 10px 15px;
 }
+
 ul.horizontal li a {
     color: white;
 }
