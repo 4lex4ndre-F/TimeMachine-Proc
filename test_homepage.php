@@ -8,6 +8,10 @@ require("inc/header.inc.php");
     <!-- appel du formulaire -->
     <?php require('inc/formulaire.inc.php'); ?>
 
+    <pre>$_GET : <?= var_dump($_GET) ?></pre>
+    <pre>$_POST : <?= var_dump($_POST) ?></pre>
+    <pre>$_SESSION : <?= var_dump($_SESSION) ?></pre>
+
     <div class="container">
 
         <div class="row vignette">

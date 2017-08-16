@@ -3,11 +3,15 @@ body {
 }
 
 
-/* TEST */
-div.contenu-page {
-    min-height: 500px;
-    background: white;
+/* DEBUG */
+pre {
+    background: orange;
+    color: black;
+    font-weight: bold;
+
 }
+
+
 
 
 /* FORMULAIRE TEST - css tout pourri */

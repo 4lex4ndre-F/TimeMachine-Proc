@@ -3,17 +3,22 @@
 
 
 // connexion à la BDD
-$pdo = new PDO('mysql:host=localhost;timemachine', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+$pdo = new PDO('mysql:host=localhost;dbname=timemachine', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
-// appel du fichier contenant toutes les fonctions.
+// appel des fichiers contenant certaines fonctions.
 require_once("function.inc.php");
+
 
 // création de variables pouvant nous servir dans le cadre du projet:
 // variable pour afficher des messages à l'utilisateur
 $message = "";
 
 // ouverture de la session
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
 
 
 
