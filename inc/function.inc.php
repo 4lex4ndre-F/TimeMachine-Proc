@@ -5,9 +5,6 @@
 
 
 
-
-
-
 // fonction pour savoir si un utilisateur est connecté
 function utilisateur_est_connecte()
 {
@@ -18,3 +15,4 @@ function utilisateur_est_connecte()
     }
     return false; // si on rentre pas dans le if, on retourne false.
 }
+
