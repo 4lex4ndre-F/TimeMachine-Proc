@@ -30,7 +30,6 @@ if(empty($_SESSION['utilisateur'])) {
         // AUTORISATION d'ACCES ACCORDEE
         // appel des requetes de /inc/admin/admin.php
         // /!\ Limiter le php sur la présente page
-
     }
 }
 
@@ -47,7 +46,7 @@ require("inc/nav.inc.php");
     <!-- change en fonction de la page chargée -->
     <div class="container">
         <div class="contenu-page">
-            <h1>Affichage de la page d'administration</h1>
+            <h1>Page d'administration</h1>
 
             <!-- gestion membres -->
             <section>
@@ -70,13 +69,12 @@ require("inc/nav.inc.php");
                                 <li><a href="#" id="masquer_membres" style="display: none;">Masquer les membres</a></li>
                             </ul>                            
                         </div><!-- fin bouton gestion users -->
-                        
-                        <!-- rechercher un membre -->
-                        <!-- Champ de recherche sur les indices id, firstname, lastname et pseudo ca ne devrait pas être trop compliqué -->
+
                         <!-- A FAIRE -->
+                        <!-- rechercher un membre : Champ de recherche sur les indices id, firstname, lastname et pseudo ca ne devrait pas être trop compliqué -->                        
                         <!-- fin recherche membre -->
 
-                        <!-- tableau des membres - affichage dépend de la demande de l'admin (un peu de js) -->
+                        <!-- tableau des membres - affichage dépend de la demande de l'admin (un peu de js c'est bien) -->
                         <table id="table_users" class="table" style="display: none;">
                             <thead>
                                 <tr>

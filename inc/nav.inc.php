@@ -1,5 +1,5 @@
 <?php
-    // Il faut vérifier que l'utilsateur est admin aussi à ce niveau pour l'affichage de l'option d'administration
+    // Il faut vérifier que l'utilsateur est admin aussi à ce niveau pour l'affichage de l'option d'administration dans le menu dropdown
 
     //autorisation d'accès - reprise d'une partie du code de la page espace_admin.php à défaut de mieux pour l'instant
     $autorisation = null;
@@ -8,13 +8,14 @@
         $autorisation = $_SESSION['utilisateur']['status'];
 
 
-    // La deconnexion fonctionne
+    // deconnexion
     if(isset($_GET['action']) && $_GET['action'] == 'deconnexion' )
     {
         session_destroy();
         header("location:test_homepage.php");
     }
 ?>
+
     <!-- PARTIE HAUTE DU SITE -->
     <div class="container">
         <div class="row">

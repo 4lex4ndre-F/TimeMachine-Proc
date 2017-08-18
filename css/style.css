@@ -1,3 +1,13 @@
+/* PARTIE RESERVEE POUR LES APPELS DE POLICES D'ECRITURE */
+
+
+/*
+Le css est vraiment à revoir, SURTOUT pour l'aspect graphique du site.
+Une chartre graphique serait idéale
+
+Un autre point important : il faudrait utiliser les autres unités de valeur d'affichage comme les em par exemple, c'est plus propre.
+*/
+
 body {
     background: gray;
 }
@@ -35,7 +45,7 @@ pre {
 }
 
 
-/* FORMULAIRE TEST - css tout pourri a MODIFIER */
+/* FORMULAIRE TEST */
 
 .test_form {
     box-sizing: border-box;
@@ -118,4 +128,8 @@ th {
 td>a {
     display: inline-block;
     margin: 2px 5px;
+}
+
+section {
+    margin: 10px auto;
 }

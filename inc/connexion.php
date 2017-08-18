@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 //vérification si l'utilisateur est connecté : 
 // 1. le modal de connexion et d'inscription n'apparait pas / disparait
 // 2. le bouton de déconnexion apparait
@@ -15,16 +12,13 @@ $pseudo = "";
 $password = "";
 
 
-
 //Vérification de l'existence des indices du formulaire
-
-
 
 if(!empty($_POST['login']) && !empty($_POST['password']))
 {
     //$message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST REMPLI<br /></div>';
 
-
+    // La connexion peut se faire via le pseudo ou le mot de passe de l'utilisateur dans un champ unique
     $login = $_POST['login'];
     $password = $_POST['password'];
     // comparaison du post avec la BDD
@@ -62,16 +56,9 @@ if(!empty($_POST['login']) && !empty($_POST['password']))
         //on redirige sur homepage + message ?
         header("location:test_homepage.php");
     }
-
-
-
-
-
 }
 else
 {
-    //$message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST VIDE<br /></div>';
+    // message d'erreur à prévoir
 }
 
-
-?>

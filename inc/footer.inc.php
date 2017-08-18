@@ -2,7 +2,7 @@
     <footer>
         <div class="container">
             <nav>
-                <ul class="horizontal"> 
+                <ul class="horizontal"><!-- FAIRE LES PAGES -->
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Site map</a></li>

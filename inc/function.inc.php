@@ -1,9 +1,7 @@
 <?php
 
 // CETTE PAGE CONTIENT LES FONCTIONS PRINCIPALES DU SITE
-
-
-
+// Elle ne peuvent être appellée que par les pages qui require('init.inc.php')
 
 // fonction pour savoir si un utilisateur est connecté
 function utilisateur_est_connecte()

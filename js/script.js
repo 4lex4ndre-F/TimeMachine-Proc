@@ -4,6 +4,14 @@ function l(e) {
 };
 
 
+/* GLOBAL 
+    page d'accueil
+    formulaire connexion et inscription (des modals serait bien)
+    page photos + résultats de recherche
+    page stories + résultats de recherche
+    Pour les recherches, ce serait bien de mettre un peu de technologie Ajax afin que des résultats s'affichent pendant la frappe par exemple    
+*/
+
 
 /* ADMINISTRATION */
 
@@ -13,7 +21,7 @@ var afficherMembres = document.getElementById('afficher_membres');
 
 if (typeof afficherMembres != 'undefined' && afficherMembres != null) {
     document.getElementById('afficher_membres').addEventListener('click', function() {
-        console.log('click');
+        l('click afficher');
         document.getElementById('table_users').style.display = "block";
         document.getElementById('masquer_membres').style.display = "block";
         document.getElementById('afficher_membres').style.display = "none";
@@ -25,9 +33,13 @@ var masquerMembres = document.getElementById('masquer_membres');
 
 if (typeof masquerMembres != 'undefined' && masquerMembres != null) {
     document.getElementById('masquer_membres').addEventListener('click', function() {
-        console.log('click masquer');
+        l('click masquer');
         document.getElementById('table_users').style.display = "none";
         document.getElementById('afficher_membres').style.display = "block";
         document.getElementById('masquer_membres').style.display = "none";
     });
 }
+
+// gestion photos
+
+// gestion commentaires
