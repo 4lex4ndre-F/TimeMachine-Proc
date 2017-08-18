@@ -13,6 +13,10 @@ require_once("function.inc.php");
 // variable pour afficher des messages à l'utilisateur
 $message = "";
 
+
+
+
+
 // ouverture de la session
 if(!isset($_SESSION))
 {

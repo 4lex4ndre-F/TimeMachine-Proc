@@ -3,6 +3,7 @@ require("inc/init.inc.php");
 
 // la ligne suivante commence les affichages dans la page
 require("inc/header.inc.php");  
+require("inc/nav.inc.php");  
 ?>
 
     <!-- appel du formulaire -->

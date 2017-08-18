@@ -3,6 +3,7 @@ require("inc/init.inc.php");
 
 // la ligne suivante commence les affichages dans la page
 require("inc/header.inc.php");  
+require("inc/nav.inc.php");  
 ?>
 
     <!-- appel du formulaire -->
@@ -11,6 +12,7 @@ require("inc/header.inc.php");
     <pre>$_GET : <?= var_dump($_GET) ?></pre>
     <pre>$_POST : <?= var_dump($_POST) ?></pre>
     <pre>$_SESSION : <?= var_dump($_SESSION) ?></pre>
+    <pre>URL : <?= URL ?></pre>
 
     <div class="container">
 

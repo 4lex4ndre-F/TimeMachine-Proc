@@ -35,7 +35,7 @@ pre {
 }
 
 
-/* FORMULAIRE TEST - css tout pourri */
+/* FORMULAIRE TEST - css tout pourri a MODIFIER */
 
 .test_form {
     box-sizing: border-box;
@@ -106,4 +106,16 @@ ul.horizontal li {
 
 ul.horizontal li a {
     color: white;
+}
+
+
+/* ESPACE ADMIN/PERSO */
+
+th {
+    text-align: center;
+}
+
+td>a {
+    display: inline-block;
+    margin: 2px 5px;
 }

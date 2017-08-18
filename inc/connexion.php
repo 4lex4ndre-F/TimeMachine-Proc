@@ -1,12 +1,6 @@
 <?php
 
 
-// DECONNEXION
-if(isset($_GET['action']) && $_GET['action'] =='deconnexion' )
-{
-	session_destroy();
-    header("location:test_homepage.php");
-}
 
 
 //vérification si l'utilisateur est connecté : 
@@ -33,14 +27,14 @@ if(!empty($_POST['login']) && !empty($_POST['password']))
 
     $login = $_POST['login'];
     $password = $_POST['password'];
-    // comparaison du post avec la BDD - /!\ réduire les champs de la table users
+    // comparaison du post avec la BDD
     $req = "SELECT * FROM users WHERE password = :password AND ";
     if(!empty($_POST['login']) && filter_var($_POST['login'], FILTER_VALIDATE_EMAIL))
     {
         $req .= "email = :email";
         $param = ":email";
     }
-    else
+    elseif (!empty($_POST['login']) && !filter_var($_POST['login'], FILTER_VALIDATE_EMAIL))
     {
         $req .= "pseudo = :pseudo";
         $param = ":pseudo";
@@ -63,8 +57,7 @@ if(!empty($_POST['login']) && !empty($_POST['password']))
         $_SESSION['utilisateur']['gender'] = $info_utilisateur['gender'];
         $_SESSION['utilisateur']['pseudo'] = $info_utilisateur['pseudo'];
         $_SESSION['utilisateur']['email'] = $info_utilisateur['email'];
-        // status ?
-        // $_SESSION['utilisateur']['status'] = $info_utilisateur['status'];
+        $_SESSION['utilisateur']['status'] = $info_utilisateur['status'];
 
         //on redirige sur homepage + message ?
         header("location:test_homepage.php");

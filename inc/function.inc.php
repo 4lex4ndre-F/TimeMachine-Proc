@@ -16,3 +16,14 @@ function utilisateur_est_connecte()
     return false; // si on rentre pas dans le if, on retourne false.
 }
 
+// fonction de vérif admin
+function verifAdmin($status)
+{
+    if($status == 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
