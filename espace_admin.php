@@ -54,7 +54,7 @@ require("inc/nav.inc.php");
                     <!-- cadre stat globales -->
                     <div class="col-sm-12" id="stats">
 
-
+                        <pre>$_GET : <?= var_dump($_GET) ?></pre>
                         
                         <h2>Gestion des membres</h2>
                         <p>nombre d'utilisateurs enregistrés : <?= $nbuser ?> dont <?= $nbfemmes ?> femme(s) et <?= $nbhommes ?> homme(s)</p>

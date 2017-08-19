@@ -14,13 +14,13 @@ $password = "";
 
 //Vérification de l'existence des indices du formulaire
 
-if(!empty($_POST['login']) && !empty($_POST['password']))
+if(!empty($_POST['login']) && !empty($_POST['mdp']))
 {
     //$message .= '<div class="alert alert-success" role="success" style="margin-top:20px;">POST REMPLI<br /></div>';
 
     // La connexion peut se faire via le pseudo ou le mot de passe de l'utilisateur dans un champ unique
     $login = $_POST['login'];
-    $password = $_POST['password'];
+    $password = $_POST['mdp'];
     // comparaison du post avec la BDD
     $req = "SELECT * FROM users WHERE password = :password AND ";
     if(!empty($_POST['login']) && filter_var($_POST['login'], FILTER_VALIDATE_EMAIL))

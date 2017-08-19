@@ -76,9 +76,32 @@ if($nbuser > 0) {
     $result_users = "La liste ne contient aucun utilisateur";// fusionner les <td>
 }
 
+// actions sur les membres
 
 
 
+// voir la fiche membre = esace perso 
+if(isset($_GET['action']) && $_GET['action'] == 'voir' && isset($_GET['id_user']) && is_numeric($_GET['id_user'])) {
+    // affichage de la fiche membre A FAIRE
+}
+// modifier un membre (au moins status + emeil + password)
+if(isset($_GET['action']) && $_GET['action'] == 'modification' && isset($_GET['id_user']) && is_numeric($_GET['id_user'])) {
+    // affichage du formulaire de modification
+    
+}
+// supprimer un membre
+if(isset($_GET['action']) && $_GET['action'] == 'supprimer' && isset($_GET['id_user']) && is_numeric($_GET['id_user'])) {
+    // variable de récupération de l'id membre
+    $idMembre = $_GET['id_user'];
+    
+    // une demande de confirmation serait bien
+
+    // requete du suppression
+    $req_suppr_user = $pdo->query("DELETE FROM users WHERE id = $idMembre");
+    header("location:espace_admin.php");
+
+    // message de confirmation
+}
 /*---------------------------------------------------------
                     TABLE PICTURES
 
